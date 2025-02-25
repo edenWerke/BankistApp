@@ -74,39 +74,7 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
-let arr=['a','b','c','d','e']
-// let arr:string[]
-//copy of an array with new array
-// arr.slice(2)
-// // ignores the last
-// console.log(arr.slice(2,4))
-// // start to count from the back
-// console.log(arr.slice(-2))
-// // to make shallow copy of the original array
-// console.log(arr.slice());
-// // we can also use spread operater to make shallow copy too
-// console.log([...arr])
-
-// Splice 
-// does change the original array
-// affects the original array
-console.log(arr.splice(2))
-// deleting the last element
-arr.splice(-1)
-console.log(arr)
-// Reverse
-// does affect the original method
-arr=['a','b','c','d','e']
-const arr2=['j','i','h','g','j']
-console.log(arr2.reverse())
-//Concat
-// does not mutate the original array
-const letters=arr.concat(arr2);
-console.log(letters)
- // anothe way of concatnating
- console.log([...arr,...arr2])
-
- //Join 
- console.log(letters.join(' - '))
- //Push
- console.log(arr.push('o'))
+const arr=[23,44,55];
+console.log(arr[0]);
+// another way of loacating position
+console.log(arr.at(0))
