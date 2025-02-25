@@ -100,5 +100,11 @@ arr=['a','b','c','d','e']
 const arr2=['j','i','h','g','j']
 console.log(arr2.reverse())
 //Concat
+// does not mutate the original array
 const letters=arr.concat(arr2);
 console.log(letters)
+ // anothe way of concatnating
+ console.log([...arr,...arr2])
+
+ //Join 
+ console.log(letters.join(' - '))
