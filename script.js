@@ -94,3 +94,7 @@ console.log(arr.splice(2))
 // deleting the last element
 arr.splice(-1)
 console.log(arr)
+// Reverse
+arr=['a','b','c','d','e']
+const arr2=['j','i','h','g','j']
+console.log(arr2.reverse())
