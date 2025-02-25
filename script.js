@@ -95,6 +95,10 @@ console.log(arr.splice(2))
 arr.splice(-1)
 console.log(arr)
 // Reverse
+// does affect the original method
 arr=['a','b','c','d','e']
 const arr2=['j','i','h','g','j']
 console.log(arr2.reverse())
+//Concat
+const letters=arr.concat(arr2);
+console.log(letters)
