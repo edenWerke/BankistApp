@@ -108,3 +108,5 @@ console.log(letters)
 
  //Join 
  console.log(letters.join(' - '))
+ //Push
+ console.log(arr.push('o'))
