@@ -71,10 +71,17 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
-const arr=[23,44,55];
-console.log(arr[0]);
-// another way of loacating position
-console.log(arr.at(0))
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+for(const movement of movements){
+  if(movement>0){
+    console.log(`you deposited ${movement}`)
+  }
+  else{
+    console.log(`you deposited ${Math.abs(movement)}`)
+  }
+}
