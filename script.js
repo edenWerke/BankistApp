@@ -92,25 +92,29 @@ const currencies = new Map([
   ['EUR', 'Euro'],
   ['GBP', 'Pound sterling'],
 ]);
-const checkDogs=function(dogsJulia,dogsKate){
-  const dogsJuliaCorrected=dogsJulia.slice();
-  dogsJuliaCorrected.splice(0,1);
-  dogsJuliaCorrected.splice(-2);
-  console.log(dogsJuliaCorrected);
-  const dogs=dogsJuliaCorrected.concat(dogsKate)
-  console.log(dogs)
-  dogs.forEach(function(dog,i){
-   console.log( dog<3 ? `dog no ${i+1} is really puppy and is ${dog} years old`: `dog no ${i+1} is really old and is ${dog} years old`)
 
-  })
-}
-// checkDogs([3,5,2,12,7],[4,1,15,8,1])
-checkDogs([3,5,2,12,7],[4,1,15,8,1])
 
-// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
 // const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 
+//Map :silmilar with Foreach but creates a brand new array over the original array
+//Filter: contains elements that passed test condition  condition and neturn new array
+//Reduce: Adding all elements together{like snow ball it gets larger when it rolls} no new array but it reduces it by adding
+
+
+
+
+const eurToUsd=1.1;
+
+const movementsUSD= movements.map(function(mov){
+  return mov*eurToUsd;
+  // return 23;
+
+})
+console.log(movements)
+console.log(movementsUSD)
+ 
