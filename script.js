@@ -61,7 +61,29 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
-/////////////////////////////////////////////////
+// writing code on the global is not recommended
+//pass data in to function is really Good
+const displayMovements = function(movements) {
+  // inner html returns everything that is in html
+  // we are using like setter
+  containerMovements.innerHTML=''
+  movements.forEach(function(mov, i) {
+    const type = mov > 0 ? 'deposit' : 'withdrawal';
+    const html = `
+      <div class="movements__row">
+        <div class="movements__type movements__type--${type}">${i + 1} ${type}</div>
+        <div class="movements__value">${mov}</div>
+      </div>`;
+  //  afterbegin tetekimna gn [8,7,6,5,4,3,2,1] ybl which we want
+      containerMovements.insertAdjacentHTML('afterbegin', html) // Correct method name
+// befor begin tetekimna orderu 1,2,3,4,5,6,
+      // containerMovements.insertAdjacentElement('beforend',html)
+    });
+};
+
+// Call the function to display account1 movements
+displayMovements(account1.movements);
+/////////////////////////////////////////// //////
 /////////////////////////////////////////////////
 // LECTURES
 
@@ -75,31 +97,6 @@ const currencies = new Map([
 
 /////////////////////////////////////////////////
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-// ADDING COUNTERS
-
-
-for(const [i, movement ]of movements.entries()){
-  if(movement>0){
-    console.log(`Movements ${i+1}you deposited ${movement}`)
-  }
-  else{
-    console.log(`Movements ${i+1} you withdraw ${Math.abs(movement)}`)
-  }
-}
-// EASIER AND CLEANER TO USE 
-// Gettin the current element
-console.log('-----FOREACH')
-movements.forEach(function(movement,index,array){
-
-  if(movement>0){
-    console.log(`${index+1} you deposited ${movement} `)
-  }
-  else{
-    console.log(`${index+1}you withdrew ${Math.abs(movement)}`)
-  }
-}
-)
-//WE TELL FOR EACH TO ITERATE AND DISPLAY TO STRING BY GIVING CALLBACK FUNCTIONS
 
