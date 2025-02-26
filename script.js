@@ -92,6 +92,16 @@ const currencies = new Map([
   ['EUR', 'Euro'],
   ['GBP', 'Pound sterling'],
 ]);
+const checkDogs=function(dogsJulia,dogsKate){
+  const dogsJuliaCorrected=dogsJulia.slice();
+  dogsJuliaCorrected.splice(0,1);
+  dogsJuliaCorrected.splice(-2);
+  console.log(dogsJuliaCorrected);
+  const dogs=dogsJuliaCorrected.concat(dogsKate)
+  console.log(dogs)
+  // dogs.forEach(function)
+}
+checkDogs([3,5,2,12,7],[4,1,15,8,3])
 
 // const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
