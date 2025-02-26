@@ -99,9 +99,13 @@ const checkDogs=function(dogsJulia,dogsKate){
   console.log(dogsJuliaCorrected);
   const dogs=dogsJuliaCorrected.concat(dogsKate)
   console.log(dogs)
-  // dogs.forEach(function)
+  dogs.forEach(function(dog,i){
+   console.log( dog<3 ? `dog no ${i+1} is really puppy and is ${dog} years old`: `dog no ${i+1} is really old and is ${dog} years old`)
+
+  })
 }
-checkDogs([3,5,2,12,7],[4,1,15,8,3])
+// checkDogs([3,5,2,12,7],[4,1,15,8,1])
+checkDogs([3,5,2,12,7],[4,1,15,8,1])
 
 // const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
