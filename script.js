@@ -77,11 +77,29 @@ const currencies = new Map([
 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-for(const movement of movements){
+// ADDING COUNTERS
+
+
+for(const [i, movement ]of movements.entries()){
   if(movement>0){
-    console.log(`you deposited ${movement}`)
+    console.log(`Movements ${i+1}you deposited ${movement}`)
   }
   else{
-    console.log(`you deposited ${Math.abs(movement)}`)
+    console.log(`Movements ${i+1} you withdraw ${Math.abs(movement)}`)
   }
 }
+// EASIER AND CLEANER TO USE 
+// Gettin the current element
+console.log('-----FOREACH')
+movements.forEach(function(movement,index,array){
+
+  if(movement>0){
+    console.log(`${index+1} you deposited ${movement} `)
+  }
+  else{
+    console.log(`${index+1}you withdrew ${Math.abs(movement)}`)
+  }
+}
+)
+//WE TELL FOR EACH TO ITERATE AND DISPLAY TO STRING BY GIVING CALLBACK FUNCTIONS
+
