@@ -86,12 +86,27 @@ const displayMovements = function(movements) {
     }
     calcDisplayBalance(account1.movements)
 
+
     const calcDisplaySummary=function(movements){
       const income=movements.filter(mov=>mov >0)
       .reduce((acc,mov)=>acc +mov, 0);
       labelSumIn.textContent=`${income} EUR`
     }
     calcDisplaySummary(account1.movements)
+
+const calcoutGoingMoney=function(movements){
+  const outCome=movements.filter((mov)=>mov<0).reduce((acc,mov)=>acc+mov,0);
+  labelSumOut.textContent=`${Math.abs(outCome)} EUR`
+}
+
+
+calcoutGoingMoney(account1.movements)
+
+
+
+
+
+
 };
 
 // Call the function to display account1 movements
