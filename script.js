@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -94,7 +94,6 @@ const currencies = new Map([
 ]);
 
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
@@ -111,12 +110,12 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const eurToUsd=1.1;
 
 // const movementsUSD= movements.map(function(mov){
-//   return mov*eurToUsd;
-//   // return 23;
-
-// })
-// replace with arrow
-// const movementsUSD=movements.map(mov=>  mov * eurToUsd) 
+  //   return mov*eurToUsd;
+  //   // return 23;
+  
+  // })
+  // replace with arrow
+  // const movementsUSD=movements.map(mov=>  mov * eurToUsd) 
 // const movementsUSD= movements.map(mov=> mov * eurToUsd);
 // console.log(movements)
 // console.log(movementsUSD)
@@ -125,7 +124,7 @@ const eurToUsd=1.1;
 //   console.log(movementUSDfor)
 
 // const movementDescription = movements.map((mov, i) => 
-//   `Movement ${i + 1}: you ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(mov)}`
+  //   `Movement ${i + 1}: you ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(mov)}`
 // );
 
 // console.log(movementDescription);
@@ -139,29 +138,54 @@ const eurToUsd=1.1;
 // toLowerCase()
 // .split(' ')
 // .map(function(lett,i){
-//   return lett[0]; 
-// }).join('');
-// const createUsername=function(user){
-// const username=user.
-// toLowerCase()
-// .split(' ')
-// .map (lett => lett[0]).join('');
-// return username
-// }
-// console.log(createUsername('Steven Thomas Williams'))
-const createUsername=function(accs){
-  accs.forEach(function(acc){
-    acc.usern=acc.owner
-  .toLowerCase()
-  .split(' ')
-  .map (lett => lett[0]).join('');})
+  //   return lett[0]; 
+  // }).join('');
+  // const createUsername=function(user){
+    // const username=user.
+    // toLowerCase()
+    // .split(' ')
+    // .map (lett => lett[0]).join('');
+    // return username
+    // }
+    // console.log(createUsername('Steven Thomas Williams'))
+    // const createUsername=function(accs){
+      //   accs.forEach(function(acc){
+        //     acc.username=acc.owner
+        //   .toLowerCase()
+        //   .split(' ')
+        //   .map (lett => lett[0]).join('');})
+        
+        // }
+        //   createUsername(accounts)
+        //   console.log(accounts)
+        
+        // const firstLetter=username.map(function(lett,i){
+          //  return lett.slice(0, 1); 
+          
+          // })
+          // console.log(firstLetter.join(''))
+//           // FILTER ARRAY
+          
+          
+//           // const deposit=movements.filter(function(mov){
+//             //   return  mov>0
+            
+//             // })
+//             // console.log(deposit)
+            const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+            const deposit = movements.filter(function(mov) {
+              return mov > 0;
+            });
+            console.log(deposit); // [200, 450, 3000, 70, 1300]
+            
+            // // movements remains unchanged
+          
+           
+// console.log("Script is running..."); // Check if script runs
 
-}
-  createUsername(accounts)
-  console.log(accounts)
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-// const firstLetter=username.map(function(lett,i){
-//  return lett.slice(0, 1); 
+// const deposit = movements.filter(mov => mov > 0);
+// console.log(deposit); // Should log: [200, 450, 3000, 70, 1300]
 
-// })
-// console.log(firstLetter.join(''))
+// console.log(movements); // Ensure original array is still intact
