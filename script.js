@@ -251,7 +251,9 @@ console.log(humanAge)
 const avg=adults.reduce((acc,curr)=>{
  return  acc+curr
 },0)
-console.log(avg/humanAge.length)
+console.log(avg/adults.length)
 }
 calcAverageHumanAge([5,2,4,1,15,8,3])
 
+ const totalDepositUSD=movements.filter(mov=>mov>0).map(mov=>mov*eurToUsd).reduce((acc,curr)=>acc+curr)
+ console.log(totalDepositUSD)
