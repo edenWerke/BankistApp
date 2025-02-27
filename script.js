@@ -172,20 +172,18 @@ const eurToUsd=1.1;
             
 //             // })
 //             // console.log(deposit)
-            const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
-            const deposit = movements.filter(function(mov) {
-              return mov > 0;
-            });
-            console.log(deposit); // [200, 450, 3000, 70, 1300]
-            
-            // // movements remains unchanged
-          
-           
-// console.log("Script is running..."); // Check if script runs
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const deposit = movements.filter(function(mov) {
+  return mov > 0;
+});console.log(deposit); // [200, 450, 3000, 70, 1300]
 
-// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-// const deposit = movements.filter(mov => mov > 0);
-// console.log(deposit); // Should log: [200, 450, 3000, 70, 1300]
+//for loop has limitation of calling many methods
+ 
+const depositFor=[]
+for (mov of movements) if (mov>0)depositFor.push(mov)
+  console.log(depositFor)
 
-// console.log(movements); // Ensure original array is still intact
+const withdrawal=movements.filter(mov=>mov <0 )
+
+console.log(withdrawal)
