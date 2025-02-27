@@ -141,15 +141,24 @@ const eurToUsd=1.1;
 // .map(function(lett,i){
 //   return lett[0]; 
 // }).join('');
-const createUsername=function(user){
-const username=user.
-toLowerCase()
-.split(' ')
-.map (lett => lett[0]).join('');
-return username
-}
-console.log(createUsername('Steven Thomas Williams'))
+// const createUsername=function(user){
+// const username=user.
+// toLowerCase()
+// .split(' ')
+// .map (lett => lett[0]).join('');
+// return username
+// }
+// console.log(createUsername('Steven Thomas Williams'))
+const createUsername=function(accs){
+  accs.forEach(function(acc){
+    acc.usern=acc.owner
+  .toLowerCase()
+  .split(' ')
+  .map (lett => lett[0]).join('');})
 
+}
+  createUsername(accounts)
+  console.log(accounts)
 
 // const firstLetter=username.map(function(lett,i){
 //  return lett.slice(0, 1); 
