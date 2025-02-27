@@ -117,25 +117,42 @@ const eurToUsd=1.1;
 // })
 // replace with arrow
 // const movementsUSD=movements.map(mov=>  mov * eurToUsd) 
-const movementsUSD= movements.map(mov=> mov * eurToUsd);
-console.log(movements)
-console.log(movementsUSD)
-const movementUSDfor=[];
-for(const mov of movements) movementUSDfor.push(mov*eurToUsd)
-  console.log(movementUSDfor)
+// const movementsUSD= movements.map(mov=> mov * eurToUsd);
+// console.log(movements)
+// console.log(movementsUSD)
+// const movementUSDfor=[];
+// for(const mov of movements) movementUSDfor.push(mov*eurToUsd)
+//   console.log(movementUSDfor)
 
-const movementDescription = movements.map((mov, i) => 
-  `Movement ${i + 1}: you ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(mov)}`
-);
+// const movementDescription = movements.map((mov, i) => 
+//   `Movement ${i + 1}: you ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(mov)}`
+// );
 
-console.log(movementDescription);
+// console.log(movementDescription);
 
 
 
-const user='Steven Thomas Williams'//stw
+// const user='Steven Thomas Williams'//stw
 
 // spliting each word by blank space by blank space 
-const username=user.toLowerCase().split(' ')
+// const username=user.
+// toLowerCase()
+// .split(' ')
+// .map(function(lett,i){
+//   return lett[0]; 
+// }).join('');
+const createUsername=function(user){
+const username=user.
+toLowerCase()
+.split(' ')
+.map (lett => lett[0]).join('');
+return username
+}
+console.log(createUsername('Steven Thomas Williams'))
 
 
-console.log(username)
+// const firstLetter=username.map(function(lett,i){
+//  return lett.slice(0, 1); 
+
+// })
+// console.log(firstLetter.join(''))
