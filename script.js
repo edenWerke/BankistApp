@@ -79,6 +79,12 @@ const displayMovements = function(movements) {
 // befor begin tetekimna orderu 1,2,3,4,5,6,
       // containerMovements.insertAdjacentElement('beforend',html)
     });
+    const calcDisplayBalance=function(movements){
+      const balance=movements.reduce((acc,curr)=> acc+curr,0);
+    labelBalance.textContent=`${balance} EUR`;
+    
+    }
+    calcDisplayBalance(account1.movements)
 };
 
 // Call the function to display account1 movements
@@ -191,13 +197,34 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 console.log(movements)
 // reduce accepts current element and the index and also the entiare array
 // accumlator{acc} like snow ball we initalize by giving it zero  
-const balance=movements.reduce(function(acc,cur,i,arr){
-console.log(`iteration ${i} : ${acc}`)
-  return acc+cur
- },0)
+// const balance=movements.reduce(function(acc,cur,i,arr){
+// console.log(`iteration ${i} : ${acc}`)
+//   return acc+cur
+//  },0)
 
- console.log(balance)
- let balance2=0
+//  console.log(balance)
+//  let balance2=0
 
- for(const mov of movements) balance2 += mov;
- console.log(balance2)
+//  for(const mov of movements) balance2 += mov;
+//  console.log(balance2)
+// const balance=movements.reduce((acc,cur)=>acc+cur,0)
+   
+   console.log(balance)
+
+// const displayMovements = function(movements) {
+//   // inner html returns everything that is in html
+//   // we are using like setter
+//   containerMovements.innerHTML=''
+//   movements.forEach(function(mov, i) {
+//     const type = mov > 0 ? 'deposit' : 'withdrawal';
+//     const html = `
+//       <div class="movements__row">
+//         <div class="movements__type movements__type--${type}">${i + 1} ${type}</div>
+//         <div class="movements__value">${mov}</div>
+//       </div>`;
+//   //  afterbegin tetekimna gn [8,7,6,5,4,3,2,1] ybl which we want
+//       containerMovements.insertAdjacentHTML('afterbegin', html) // Correct method name
+// // befor begin tetekimna orderu 1,2,3,4,5,6,
+//       // containerMovements.insertAdjacentElement('beforend',html)
+//     });
+// };
