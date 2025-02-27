@@ -194,7 +194,7 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // console.log(withdrawal)
 // Reduce method
-console.log(movements)
+// console.log(movements)
 // reduce accepts current element and the index and also the entiare array
 // accumlator{acc} like snow ball we initalize by giving it zero  
 // const balance=movements.reduce(function(acc,cur,i,arr){
@@ -209,7 +209,7 @@ console.log(movements)
 //  console.log(balance2)
 // const balance=movements.reduce((acc,cur)=>acc+cur,0)
    
-   console.log(balance)
+  //  console.log(balance)
 
 // const displayMovements = function(movements) {
 //   // inner html returns everything that is in html
@@ -230,13 +230,28 @@ console.log(movements)
 // };
 // Maximum value using reduce method
 
-const max=movements.reduce((acc,go)=>{
-// acc in is traversing throuh the movments
-// current 450  acc 200 now mocurr
-if(acc>go)
-  return acc
-else
-return go
+// const max=movements.reduce((acc,go)=>{
+// // acc in is traversing throuh the movments
+// // current 450  acc 200 now mocurr
+// if(acc>go)
+//   return acc
+// else
+// return go
 
-},movements[0])
-console.log(max)
+// },movements[0])
+// console.log(max)
+
+const calcAverageHumanAge=function(ages){
+humanAge=ages.map(age=> (age <= 2 ? 2*age : 16+age*4));
+  // console.log(humanAge)
+
+const adults=humanAge.filter(age=>age>=18)
+console.log(adults)
+console.log(humanAge)
+const avg=adults.reduce((acc,curr)=>{
+ return  acc+curr
+},0)
+console.log(avg/humanAge.length)
+}
+calcAverageHumanAge([5,2,4,1,15,8,3])
+
