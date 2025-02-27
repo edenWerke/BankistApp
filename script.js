@@ -173,17 +173,31 @@ const eurToUsd=1.1;
 //             // })
 //             // console.log(deposit)
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
-const deposit = movements.filter(function(mov) {
-  return mov > 0;
-});console.log(deposit); // [200, 450, 3000, 70, 1300]
+// const deposit = movements.filter(function(mov) {
+//   return mov > 0;
+// });console.log(deposit); // [200, 450, 3000, 70, 1300]
 
 
-//for loop has limitation of calling many methods
+// //for loop has limitation of calling many methods
  
-const depositFor=[]
-for (mov of movements) if (mov>0)depositFor.push(mov)
-  console.log(depositFor)
+// const depositFor=[]
+// for (mov of movements) if (mov>0)depositFor.push(mov)
+//   console.log(depositFor)
 
-const withdrawal=movements.filter(mov=>mov <0 )
+// const withdrawal=movements.filter(mov=>mov <0 )
 
-console.log(withdrawal)
+// console.log(withdrawal)
+// Reduce method
+console.log(movements)
+// reduce accepts current element and the index and also the entiare array
+// accumlator{acc} like snow ball we initalize by giving it zero  
+const balance=movements.reduce(function(acc,cur,i,arr){
+console.log(`iteration ${i} : ${acc}`)
+  return acc+cur
+ },0)
+
+ console.log(balance)
+ let balance2=0
+
+ for(const mov of movements) balance2 += mov;
+ console.log(balance2)
