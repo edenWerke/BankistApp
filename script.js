@@ -129,3 +129,13 @@ const movementDescription = movements.map((mov, i) =>
 );
 
 console.log(movementDescription);
+
+
+
+const user='Steven Thomas Williams'//stw
+
+// spliting each word by blank space by blank space 
+const username=user.toLowerCase().split(' ')
+
+
+console.log(username)
