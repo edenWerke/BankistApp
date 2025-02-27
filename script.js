@@ -228,3 +228,15 @@ console.log(movements)
 //       // containerMovements.insertAdjacentElement('beforend',html)
 //     });
 // };
+// Maximum value using reduce method
+
+const max=movements.reduce((acc,go)=>{
+// acc in is traversing throuh the movments
+// current 450  acc 200 now mocurr
+if(acc>go)
+  return acc
+else
+return go
+
+},movements[0])
+console.log(max)
