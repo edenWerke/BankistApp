@@ -85,6 +85,13 @@ const displayMovements = function(movements) {
     
     }
     calcDisplayBalance(account1.movements)
+
+    const calcDisplaySummary=function(movements){
+      const income=movements.filter(mov=>mov >0)
+      .reduce((acc,mov)=>acc +mov, 0);
+      labelSumIn.textContent=`${income} EUR`
+    }
+    calcDisplaySummary(account1.movements)
 };
 
 // Call the function to display account1 movements
@@ -255,5 +262,15 @@ console.log(avg/adults.length)
 }
 calcAverageHumanAge([5,2,4,1,15,8,3])
 
- const totalDepositUSD=movements.filter(mov=>mov>0).map(mov=>mov*eurToUsd).reduce((acc,curr)=>acc+curr)
- console.log(totalDepositUSD)
+
+//PIPELINE
+ const totalDepositUSD=movements
+ .filter(mov=>mov>0)
+ .map(mov=>mov*eurToUsd)
+ .reduce((acc,curr)=>acc+curr)
+ console.log(totalDepositUSD)  
+
+
+
+
+ 
