@@ -106,6 +106,10 @@ calcoutGoingMoney(account1.movements)
 const interest=movements.
 filter((depo)=>depo>0)
 .map((deposit)=>deposit*1.2/100)
+.filter((int,i,arr)=>{
+  console.log(arr)
+  return int>=1
+})
 .reduce((acc,inte)=>acc+inte,0)
 
 labelSumInterest.textContent=`${interest} EURO`
