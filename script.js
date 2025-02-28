@@ -286,13 +286,22 @@ calcAverageHumanAge([5,2,4,1,15,8,3])
 
 
 //PIPELINE
- const totalDepositUSD=movements
- .filter(mov=>mov>0)
- .map(mov=>mov*eurToUsd)
- .reduce((acc,curr)=>acc+curr)
- console.log(totalDepositUSD)  
+//  const totalDepositUSD=movements
+//  .filter(mov=>mov>0)
+//  .map(mov=>mov*eurToUsd)
+//  .reduce((acc,curr)=>acc+curr)
+//  console.log(totalDepositUSD)  
 
 
 
 
- 
+ // we should not overuse chaning it can cause performance issue
+ // in javascript methods that affect(mutate) the original array is not recommended like splice and reverse
+// CHALLANGE NUMBER THREE
+const calcAverageHumanAge2 = ages => 
+  ages
+    .map(age => (age <= 2 ? 2 * age : 16 + age * 4))
+    .filter(age => age >= 18)
+    .reduce((acc, age, i, arr) => acc + age / arr.length, 0);
+    const avg1=calcAverageHumanAge2([5,2,4,1,15,8,3])
+    console.log(avg1)
