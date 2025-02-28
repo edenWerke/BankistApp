@@ -308,7 +308,12 @@ calcAverageHumanAge([5,2,4,1,15,8,3])
 //FIND METHOD
 // return only the first element that satisfy the condition
 // filter returns all the array
-const firstWithdrawal=movements.find(mov=>mov <0)
-console.log(movements,firstWithdrawal)
-const account=accounts.find(acc=>acc.owner==='Jessica Davies')
-console.log(account)
+// const firstWithdrawal=movements.find(mov=>mov <0)
+// console.log(movements,firstWithdrawal)
+// const account=accounts.find(acc=>acc.owner==='Jessica Davis')
+// console.log(account)
+for (const acc of accounts) {
+  if (acc.owner === 'Jessica Davies') {
+    console.log(acc); // This will display Jessica's object
+  }
+}
