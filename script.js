@@ -345,6 +345,12 @@ btnLogin.addEventListener('click', function(e) {
   //cheaking if the crrent account exist by optional cheanig
 if(currentAccount ?.pin===Number(inputLoginPin.value)){
   console.log('successfull login')
-  labelWelcome.textContent="welcome to our bank"
+  //DISPLAY UI MESSAGE
+  //we ca display things with opacity 0and 100
+  labelWelcome.textContent=
+  `welcome to our bank ${currentAccount.owner
+  .split(' ')[0]
+  }`;
+  containerApp.style.opacity=100;
 }
-});
+});    
