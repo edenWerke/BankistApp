@@ -511,5 +511,10 @@ btnTransfer.addEventListener('click',function(e){
   if(amount>0 && currentAccount.balance>=amount 
     && receiverAcc ?.username!==currentAccount.username ){
 console.log('valid')
+{
+  currentAccount.movements.push(-amount);
+  receiverAcc.movements.push(amount);
+  
+}
   }
 })
