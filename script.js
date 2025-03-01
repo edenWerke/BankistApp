@@ -328,7 +328,7 @@ let currentAccount;
 btnLogin.addEventListener('click', function(e) {
   // Prevent form from submitting which can cause page reload
   e.preventDefault();
-  // console.log('login');
+  // console.log('login~');
 // Returns undifiend if it cant find it
   currentAccount = accounts.find(acc => acc.username === inputLoginUsername.value);
   // console.log(currentAccount);
