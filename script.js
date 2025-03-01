@@ -345,6 +345,7 @@ if(currentAccount ?.pin===Number(inputLoginPin.value)){
   // clearing the input filed
   inputLoginUsername.value='';
   inputLoginPin.value='';
+  inputLoginPin.blur();
   //DIsplayin movments
   displayMovements(currentAccount.movements);
   //displaying balance
