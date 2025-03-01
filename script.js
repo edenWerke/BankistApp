@@ -117,7 +117,7 @@ labelSumInterest.textContent=`${interest} EURO`
 };
 
 // Call the function to display account1 movements
-displayMovements(account1.movements);
+
 /////////////////////////////////////////// //////
 /////////////////////////////////////////////////
 // LECTURES
@@ -352,5 +352,6 @@ if(currentAccount ?.pin===Number(inputLoginPin.value)){
   .split(' ')[0]
   }`;
   containerApp.style.opacity=100;
+  displayMovements(currentAccount.movements);
 }
 });    
