@@ -79,20 +79,10 @@ const displayMovements = function(movements) {
 // befor begin tetekimna orderu 1,2,3,4,5,6,
       // containerMovements.insertAdjacentElement('beforend',html)
     });
-    const calcDisplayBalance=function(movements){
-      const balance=movements.reduce((acc,curr)=> acc+curr,0);
-    labelBalance.textContent=`${balance} EUR`;
+   
+
+
     
-    }
-    calcDisplayBalance(account1.movements)
-
-
-    const calcDisplaySummary=function(movements){
-      const income=movements.filter(mov=>mov >0)
-      .reduce((acc,mov)=>acc +mov, 0);
-      labelSumIn.textContent=`${income} EUR`
-    }
-    calcDisplaySummary(account1.movements)
 
 const calcoutGoingMoney=function(movements){
   const outCome=movements.filter((mov)=>mov<0).reduce((acc,mov)=>acc+mov,0);
@@ -352,6 +342,21 @@ if(currentAccount ?.pin===Number(inputLoginPin.value)){
   .split(' ')[0]
   }`;
   containerApp.style.opacity=100;
+  //DIsplayin movments
   displayMovements(currentAccount.movements);
+  //displaying balance
+  const calcDisplayBalance=function(movements){
+    const balance=movements.reduce((acc,curr)=> acc+curr,0);
+  labelBalance.textContent=`${balance} EUR`;
+  
+  }
+  calcDisplayBalance(currentAccount.movements)
+  // displaying Summery
+  const calcDisplaySummary=function(movements){
+    const income=movements.filter(mov=>mov >0)
+    .reduce((acc,mov)=>acc +mov, 0);
+    labelSumIn.textContent=`${income} EUR`
+  }
+  calcDisplaySummary(currentAccount.movements)
 }
 });    
