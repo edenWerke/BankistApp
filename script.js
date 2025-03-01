@@ -320,13 +320,29 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 //LOGIN FUNCTIONALITY
 
 //EVENT HANDLING
+// let currentAccount;
+
+// btnLogin.addEventListener('click', function(e) {
+//   // Prevent form from submitting  whic can cause page reload or stopping reload
+//   e.preventDefault();
+//   console.log('login');
+
+// currentAccount=accounts.find(acc=>acc.owner.username===inputLoginUsername.value);
+// console.log(currentAccount)
+// if (currentAccount.pin===Number(inputLoginPin.value)){
+//   console.log('new login')
+// }
+// });
 let currentAccount;
 
 btnLogin.addEventListener('click', function(e) {
-  // Prevent form from submitting  whic can cause page reload or stopping reload
+  // Prevent form from submitting which can cause page reload
   e.preventDefault();
-  console.log('login');
-
-currentAccount=accounts.find(acc=>acc.owner.username===inputLoginUsername.value);
-console.log(currentAccount)
+  // console.log('login');
+// Returns undifiend if it cant find it
+  currentAccount = accounts.find(acc => acc.username === inputLoginUsername.value);
+  // console.log(currentAccount);
+if(currentAccount.pin===Number(inputLoginPin.value)){
+  console.log('successfull login')
+}
 });
