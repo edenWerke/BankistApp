@@ -342,7 +342,9 @@ btnLogin.addEventListener('click', function(e) {
 // Returns undifiend if it cant find it
   currentAccount = accounts.find(acc => acc.username === inputLoginUsername.value);
   // console.log(currentAccount);
-if(currentAccount.pin===Number(inputLoginPin.value)){
+  //cheaking if the crrent account exist by optional cheanig
+if(currentAccount ?.pin===Number(inputLoginPin.value)){
   console.log('successfull login')
+  labelWelcome.textContent="welcome to our bank"
 }
 });
