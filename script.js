@@ -342,6 +342,9 @@ if(currentAccount ?.pin===Number(inputLoginPin.value)){
   .split(' ')[0]
   }`;
   containerApp.style.opacity=100;
+  // clearing the input filed
+  inputLoginUsername.value='';
+  inputLoginPin.value='';
   //DIsplayin movments
   displayMovements(currentAccount.movements);
   //displaying balance
@@ -358,5 +361,6 @@ if(currentAccount ?.pin===Number(inputLoginPin.value)){
     labelSumIn.textContent=`${income} EUR`
   }
   calcDisplaySummary(currentAccount.movements)
+
 }
 });    
