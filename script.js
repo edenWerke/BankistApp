@@ -363,5 +363,25 @@ if(currentAccount ?.pin===Number(inputLoginPin.value)){
   }
   calcDisplaySummary(currentAccount.movements)
 
+const interest=movements.
+filter((depo)=>depo>0)
+.map((deposit)=>deposit*currentAccount.interestRate /100)
+.filter((int,i,arr)=>{
+  // console.log(arr)
+  return int>=1
+})
+.reduce((acc,inte)=>acc+inte,0)
+
+labelSumInterest.textContent=`${interest} EURO`
 }
-});    
+});   
+
+//Transfer amount
+btnTransfer.addEventListener('click',function(e){
+  e.preventDefault()
+
+  
+  const amount=Number(inputTransferAmount.value)
+const receiverAcc=accounts.find(acc=>acc.username===inputTransferTo.value);
+console.log(amount,receiverAcc)
+})
