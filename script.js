@@ -183,16 +183,16 @@ const currencies = new Map([
     // return username
     // }
     // console.log(createUsername('Steven Thomas Williams'))
-    // const createUsername=function(accs){
-      //   accs.forEach(function(acc){
-        //     acc.username=acc.owner
-        //   .toLowerCase()
-        //   .split(' ')
-        //   .map (lett => lett[0]).join('');})
+    const createUsername=function(accs){
+        accs.forEach(function(acc){
+            acc.username=acc.owner
+          .toLowerCase()
+          .split(' ')
+          .map (lett => lett[0]).join('');})
         
-        // }
-        //   createUsername(accounts)
-        //   console.log(accounts)
+        }
+          createUsername(accounts)
+          console.log(accounts)
         
         // const firstLetter=username.map(function(lett,i){
           //  return lett.slice(0, 1); 
@@ -320,9 +320,13 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 //LOGIN FUNCTIONALITY
 
 //EVENT HANDLING
+let currentAccount;
 
 btnLogin.addEventListener('click', function(e) {
-  // Prevent form from submitting or stopping reload
+  // Prevent form from submitting  whic can cause page reload or stopping reload
   e.preventDefault();
   console.log('login');
+
+currentAccount=accounts.find(acc=>acc.owner.username===inputLoginUsername.value);
+console.log(currentAccount)
 });
