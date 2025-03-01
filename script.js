@@ -107,7 +107,7 @@ const interest=movements.
 filter((depo)=>depo>0)
 .map((deposit)=>deposit*1.2/100)
 .filter((int,i,arr)=>{
-  console.log(arr)
+  // console.log(arr)
   return int>=1
 })
 .reduce((acc,inte)=>acc+inte,0)
@@ -142,7 +142,7 @@ const currencies = new Map([
 
 
 
-const eurToUsd=1.1;
+// const eurToUsd=1.1;
 
 // const movementsUSD= movements.map(function(mov){
   //   return mov*eurToUsd;
@@ -270,19 +270,19 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // },movements[0])
 // console.log(max)
 
-const calcAverageHumanAge=function(ages){
-humanAge=ages.map(age=> (age <= 2 ? 2*age : 16+age*4));
-  // console.log(humanAge)
+// const calcAverageHumanAge=function(ages){
+// humanAge=ages.map(age=> (age <= 2 ? 2*age : 16+age*4));
+//   // console.log(humanAge)
 
-const adults=humanAge.filter(age=>age>=18)
-console.log(adults)
-console.log(humanAge)
-const avg=adults.reduce((acc,curr)=>{
- return  acc+curr
-},0)
-console.log(avg/adults.length)
-}
-calcAverageHumanAge([5,2,4,1,15,8,3])
+// const adults=humanAge.filter(age=>age>=18)
+// console.log(adults)
+// console.log(humanAge)
+// const avg=adults.reduce((acc,curr)=>{
+//  return  acc+curr
+// },0)
+// console.log(avg/adults.length)
+// }
+// calcAverageHumanAge([5,2,4,1,15,8,3])
 
 
 //PIPELINE
@@ -312,8 +312,17 @@ calcAverageHumanAge([5,2,4,1,15,8,3])
 // console.log(movements,firstWithdrawal)
 // const account=accounts.find(acc=>acc.owner==='Jessica Davis')
 // console.log(account)
-for (const acc of accounts) {
-  if (acc.owner === 'Jessica Davies') {
-    console.log(acc); // This will display Jessica's object
-  }
-}
+// for (const acc of accounts) {
+//   if (acc.owner === 'Jessica Davies') {
+//     console.log(acc); // This will display Jessica's object
+//   }
+// }
+//LOGIN FUNCTIONALITY
+
+//EVENT HANDLING
+
+btnLogin.addEventListener('click', function(e) {
+  // Prevent form from submitting or stopping reload
+  e.preventDefault();
+  console.log('login');
+});
