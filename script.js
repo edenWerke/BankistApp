@@ -526,3 +526,12 @@ console.log('valid')
 }
   }
 })
+//find index method
+//close account we use splice but we need and index of an array so we use findindex method
+btnClose.addEventListener('click',function(e){
+  e.preventDefault();
+  console.log('Delete');
+
+
+
+})
