@@ -531,7 +531,14 @@ console.log('valid')
 btnClose.addEventListener('click',function(e){
   e.preventDefault();
   console.log('Delete');
+  if(currentAccount?.username===inputCloseUsername.value && Number(inputClosePin.value)===currentAccount.pin){
 
+
+    const index=accounts.findIndex(acc=>(acc.username===currentAccount.username))
+// accounts.splice(index,1)
+
+console.log(index)
+  }
 
 
 })
