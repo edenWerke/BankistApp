@@ -535,7 +535,7 @@ btnClose.addEventListener('click',function(e){
 
 
     const index=accounts.findIndex(acc=>(acc.username===currentAccount.username))
-// accounts.splice(index,1)
+accounts.splice(index,1)
 
 console.log(index)
   }
