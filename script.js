@@ -602,3 +602,6 @@ console.log(allMovement)
 
 const overalBalance=allMovement.reduce((acc,mov)=>acc+mov,0)
 console.log(overalBalance)
+
+const overalBalance2=accounts.map((acc)=>acc.movements).flat().reduce((acc,mov)=>acc+mov,0)
+console.log(overalBalance2)
