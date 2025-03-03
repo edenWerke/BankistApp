@@ -606,7 +606,17 @@ console.log(overalBalance)
 const overalBalance2=accounts.map((acc)=>acc.movements).flat().reduce((acc,mov)=>acc+mov,0)
 console.log(overalBalance2)
 
-//flat map
+//flat map only goes one level so if we need more level to go deep we have to use flat
 const overalBalance3=accounts.flatMap(acc=>acc.movements)
 .reduce((acc,mov)=>acc + mov,0)
 console.log(overalBalance3)
+
+//SORTING Arrays
+
+// the sort method mutate or affects the original array we have to be carefull
+const owners=['eden','nardos','sossina','eduniya']
+console.log(owners.sort())
+console.log(owners)
+// in numbers it sorts by assuming it it an like a string
+console.log(movements)
+console.log(movements.sort())
