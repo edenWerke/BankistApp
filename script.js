@@ -649,8 +649,15 @@ console.log(movements)
 
 
 
+let sorted = false;
 
-btnSort.addEventListener('click',function(e){
+btnSort.addEventListener('click', function(e) {
+  // Prevent default action if necessary
   e.preventDefault();
-  displayMovements(currentAccount.movements,true)
-})
+  
+  // Display movements with sorting based on the current state of 'sorted'
+  displayMovements(currentAccount.movements, !sorted);
+  
+  // Toggle the sorted state
+  sorted = !sorted;
+});
