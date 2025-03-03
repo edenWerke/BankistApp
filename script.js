@@ -530,14 +530,15 @@ console.log('valid')
 //close account we use splice but we need and index of an array so we use findindex method
 btnClose.addEventListener('click',function(e){
   e.preventDefault();
-  console.log('Delete');
-  if(currentAccount?.username===inputCloseUsername.value && Number(inputClosePin.value)===currentAccount.pin){
+  // console.log('Delete');
+  if(inputCloseUsername.value===currentAccount?.username && Number(inputClosePin.value)===currentAccount.pin){
 
 
     const index=accounts.findIndex(acc=>(acc.username===currentAccount.username))
 accounts.splice(index,1)
 
-console.log(index)
+// console.log(index)
+containerApp.style.opacity=0;
   }
 
 
