@@ -641,3 +641,5 @@ console.log(movements)
 //simple sorting method
 movements.sort((a,b)=>a-b);
 console.log(movements )
+movements.sort((a,b)=>b-a);
+console.log(movements)
