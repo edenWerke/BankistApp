@@ -577,3 +577,8 @@ console.log(movements.includes(-130))
 // every method
 console.log(movements.every(mov=>mov>0))
 console.log(account4.movements.every(mov=>mov>0))
+//separate callback
+const deposit=mov=>mov>0;
+console.log(movements.every(deposit))
+console.log(movements.some(deposit))
+console.log(movements.filter(deposit))
