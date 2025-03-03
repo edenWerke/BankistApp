@@ -663,7 +663,8 @@ btnSort.addEventListener('click', function(e) {
 });
 
 //how do we write an array automatically but it affects the original array
-
+const arr4=[1,2,3,4,5,6,7];
+console.log(new Array(1,2,3,4,5,6,7))
 //The fill Method
 const x=new Array(7);
 console.log(x)
@@ -671,3 +672,17 @@ console.log(x)
 x.fill(1,3,5);
 // x.fill()
 console.log(x)
+//from 4 to 6 put 23
+arr4.fill(23,4,6);
+console.log(arr4)
+
+
+// array .from function it is way nicer
+const y=Array.from({length:7},()=>1)
+console.log(y)
+
+
+const z= Array.from({length:7},(cur,i)=>
+  i+1
+)
+console.log(z)
