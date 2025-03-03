@@ -681,8 +681,17 @@ console.log(arr4)
 const y=Array.from({length:7},()=>1)
 console.log(y)
 
-
-const z= Array.from({length:7},(cur,i)=>
+// we use _ for throw away paramater parameter that we don use it
+const z= Array.from({length:7},(_,i)=>
   i+1
 )
 console.log(z)
+// const MyRandom=Array.from({length:7},(_,i)=>Math.trunc().random(i))
+// console.log(MyRandom)
+
+labelBalance.addEventListener('click',function(){
+  const movementUI=Array.from(
+    document.querySelectorAll('.movements_value')
+  )
+  console.log(movementUI)
+})
