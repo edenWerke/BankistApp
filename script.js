@@ -600,3 +600,5 @@ const allMovement=accountMovements.flat()
 console.log(allMovement)
 
 
+const overalBalance=allMovement.reduce((acc,mov)=>acc+mov,0)
+console.log(overalBalance)
