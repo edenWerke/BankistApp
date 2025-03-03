@@ -619,4 +619,13 @@ console.log(owners.sort())
 console.log(owners)
 // in numbers it sorts by assuming it it an like a string
 console.log(movements)
-console.log(movements.sort())
+// console.log(movements.sort())
+
+
+// return <0 A, B (keep order)
+// return > 0 B,A (switch order)
+movements.sort((a,b)=>{
+  if(a>b) return 1
+  if(b>a) return -1
+})
+console.log(movements)
