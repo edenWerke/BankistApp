@@ -526,6 +526,24 @@ console.log('valid')
 }
   }
 })
+//implementing the loan
+btnLoan.addEventListener('click',function(e){
+  e.preventDefault();
+ const amount=Number(inputLoanAmount.value);
+ if(amount>0 && currentAccount.movements.some(mov=>mov>=amount/10))
+{
+  currentAccount.movements.push(amount)
+
+  updateUI(currentAccount)
+
+}
+ inputLoanAmount.value=''
+ 
+})
+
+
+
+
 //find index method
 //close account we use splice but we need and index of an array so we use findindex method
 btnClose.addEventListener('click',function(e){
@@ -551,6 +569,10 @@ console.log(movements.includes(-130))
 
 
 
-  //some specify condition
+  //some specify condition is really cool
+
+  console.log(movements.some(mov=>mov===-130))
   const anyDeposits=movements.some(mov=>mov>3000)
   console.log(anyDeposits)
+
+
