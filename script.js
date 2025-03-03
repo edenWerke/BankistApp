@@ -584,6 +584,10 @@ console.log(movements.some(deposit))
 console.log(movements.filter(deposit))
 
 
-//flat method removing the nested array
+//flat method removing the nested array goes only one level deep
 const arr=[[1,2,3,],[4,5,6],7,8]
 console.log(arr.flat());
+
+// adding the level as paramater
+const arrDeep=[[[1,2],3],[4,[5,6]],7,8];
+console.log(arrDeep.flat(2))
