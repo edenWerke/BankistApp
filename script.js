@@ -551,3 +551,6 @@ console.log(movements.includes(-130))
 
 
 
+  //some specify condition
+  const anyDeposits=movements.some(mov=>mov>3000)
+  console.log(anyDeposits)
