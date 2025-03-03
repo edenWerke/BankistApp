@@ -661,3 +661,13 @@ btnSort.addEventListener('click', function(e) {
   // Toggle the sorted state
   sorted = !sorted;
 });
+
+//how do we write an array automatically but it affects the original array
+
+//The fill Method
+const x=new Array(7);
+console.log(x)
+
+x.fill(1,3,5);
+// x.fill()
+console.log(x)
