@@ -689,9 +689,12 @@ console.log(z)
 // const MyRandom=Array.from({length:7},(_,i)=>Math.trunc().random(i))
 // console.log(MyRandom)
 
-labelBalance.addEventListener('click',function(){
-  const movementUI=Array.from(
-    document.querySelectorAll('.movements_value')
-  )
-  console.log(movementUI)
-})
+// labelBalance.addEventListener('click',function(){
+//   const movementUI=Array.from(
+//     document.querySelectorAll('.movements_value'),el=>Number(el.textContent.replace('EURO',''))
+//   )
+//   console.log(movementUI.map())
+// })
+//another easy way
+const movementsUI={...document.querySelectorAll('.movements_value')} 
+console.log(movementsUI)
