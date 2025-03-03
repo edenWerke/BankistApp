@@ -636,3 +636,8 @@ movements.sort((a,b)=>{
   if(b<a) return -1
 })
 console.log(movements)
+
+
+//simple sorting method
+movements.sort((a,b)=>a-b);
+console.log(movements )
