@@ -698,3 +698,11 @@ console.log(z)
 //another easy way
 const movementsUI={...document.querySelectorAll('.movements_value')} 
 console.log(movementsUI)
+// what actual want from this all
+// [ADD TO THE ORIGINAL ARRAY
+// .Push() to the end
+// .unshift() to the begnning
+// array exercise 
+
+const bankDepositSum=accounts.map((mov)=>mov.movements)
+console.log(bankDepositSum)
