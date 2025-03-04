@@ -704,5 +704,5 @@ console.log(movementsUI)
 // .unshift() to the begnning
 // array exercise 
 
-const bankDepositSum=accounts.map((mov)=>mov.movements)
+const bankDepositSum=accounts.map((mov)=>mov.movements).flat()
 console.log(bankDepositSum)
