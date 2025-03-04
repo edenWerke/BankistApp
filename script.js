@@ -731,7 +731,7 @@ const convertTitleCase=function(title){
 
   const expections=['a','an','the','but','or','on','in','with']
 
-const titleCase=title.toLowerCase().split(' ').map(Word=>word[0].toUpperCase()+word.slice(1));
+const titleCase=title.toLowerCase().split(' ').map(word=>expections.includes(word[0]) ? word:word[0].toUpperCase()+word.slice(1));
 
 }
 
