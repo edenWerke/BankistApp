@@ -729,9 +729,9 @@ console.log(deposits, withdrawals);
 
 const convertTitleCase=function(title){
 
-  const expections=['a','an','the','but','or','on','in','with']
+  const exceptions=['a','an','the','and','but','or','on','in','with']
 
-const titleCase=title.toLowerCase().split(' ').map(word=>expections.includes(word[0]) ? word:word[0].toUpperCase()+word.slice(1));
+const titleCase=title.toLowerCase().split(' ').map(word=>exceptions.includes(word[0]) ? word:word[0].toUpperCase()+word.slice(1)).join();
 
 }
 
