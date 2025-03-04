@@ -712,3 +712,13 @@ console.log(numDeposite)
 
 const numDeposite2=accounts.flatMap(acc=>acc.movements).reduce((count,cur)=>(cur >=1000 ?count+1:count),0)
 console.log(numDeposite2)
+// the plus plus returnss zero
+let  a=10;
+console.log(a++)
+console.log(a)
+
+
+//3 
+const sums=accounts.flatMap(acc=>acc.movements).reduce((sums,curr)=>{
+
+},{deposits:0,withdrawals:0})
