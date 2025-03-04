@@ -719,9 +719,9 @@ console.log(a)
 
 
 //3 
-const {deposits,withdrawals}=accounts.flatMap(acc=>acc.movements).reduce((sums,curr)=>{
-`${curr > 0 ? sums.deposits +=curr :sums.withdrawals+=curr}`
-// we have to return if we have vblock
-return sums
-},{deposits:0,withdrawals:0})
-console.log(deposits,withdrawals)
+const { deposits, withdrawals } = accounts.flatMap(acc => acc.movements).reduce((sum, cur) => {
+  sum[cur > 0 ? 'deposits' : 'withdrawals'] += cur;
+  return sum; // Ensure to return the accumulator
+}, { deposits: 0, withdrawals: 0 });
+
+console.log(deposits, withdrawals);
