@@ -725,3 +725,15 @@ const { deposits, withdrawals } = accounts.flatMap(acc => acc.movements).reduce(
 }, { deposits: 0, withdrawals: 0 });
 
 console.log(deposits, withdrawals);
+//this is a nice title => This Is A Nice Title
+
+const convertTitleCase=function(title){
+
+  const expections=['a','an','the','but','or','on','in','with']
+
+const titleCase=title.toLowerCase().split(' ');
+return titleCase
+}
+
+console.log(convertTitleCase('this is a nice title'))
+console.log(convertTitleCase('and here is another  title with an Example'))
