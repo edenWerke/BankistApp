@@ -706,3 +706,6 @@ console.log(movementsUI)
 
 const bankDepositSum=accounts.flatMap((mov)=>mov.movements).filter(mov=>mov>0).reduce((acc,cur)=>acc+cur)
 console.log(bankDepositSum)
+// counting the number of element in the array that have condition >1000
+const numDeposite=accounts.flatMap((mov)=>mov.movements).filter(mov=>mov>1000).length
+console.log(numDeposite)
